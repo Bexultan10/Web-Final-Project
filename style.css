@@ -1,0 +1,253 @@
+
+
+body{
+    font-family: Helvetica serif;
+}
+
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    display: none;
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px;
+    background-color: rgb(77, 35, 35); 
+}
+  
+.container {
+  width: 450px;
+  padding: 20px;
+  margin-top: 80px;
+  background-color:#fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+.option {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.button {
+  display: inline-block;
+  border-radius: 25px;
+  padding: 10px 20px;
+  background-color: #428bca;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+
+#icon{
+    max-width: 243px;
+}
+
+.dropdown-menu {
+    margin-right:-1000px;
+}
+
+.page-title{
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.form{
+    padding: 10px 0 10px 0;
+    background-color: gold;
+}
+
+.contact-label{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.footer{
+    width: 100%;
+    margin-bottom: 0;
+    
+}
+
+/* Define the animation class for adding items */
+@keyframes addItemAnimation {
+    0% { transform: scale(1) translateY(0); opacity: 1; }
+    50% { transform: scale(1.1) translateY(-10px); opacity: 0.7; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* Define the animation class for removing items */
+@keyframes removeItemAnimation {
+    0% { transform: scale(1) translateY(0); opacity: 1; }
+    50% { transform: scale(0.9) translateY(10px); opacity: 0.7; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* Apply the animation to the cart element */
+.cart-animation-add {
+    animation: addItemAnimation 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.cart-animation-remove {
+    animation: removeItemAnimation 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Add a transition for smoother cart updates */
+.cart {
+    transition: transform 0.3s, opacity 0.3s;
+    transform-origin: center bottom;
+    will-change: transform;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  /* section {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #e3f2fd;
+  } */
+
+  button {
+    border-radius: 25px;
+
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 14px 22px;
+    border: none;
+    background: #4070f4;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button:hover {
+    border-radius: 25px;
+
+    background-color: #265df2;
+  }
+  button.show-modal,
+  .modal-box {
+    border-radius: 25px;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  section.active .show-modal {
+    display: none;
+  }
+  .overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+  }
+  section.active .overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .modal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 380px;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 24px;
+    background-color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  section.active .modal-box {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .modal-box i {
+    font-size: 70px;
+    color: #4070f4;
+  }
+  .modal-box h2 {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #333;
+  }
+  .modal-box h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+  }
+  .modal-box .buttons {
+    border-radius: 25px;
+
+    margin-top: 25px;
+  }
+  .modal-box button {
+    border-radius: 25px;
+
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 0 10px;
+  }
+
+
+  /* Add CSS to ensure the video takes up the full window when not in fullscreen */
+
+#myvideo {
+  width: 100%;
+  height: auto;
+}
+
+/* Add styles for your fullscreen button here if needed */
+#fullscreenBtn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+
+
